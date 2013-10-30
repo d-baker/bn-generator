@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Fashionable metal bandname generator</title>
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="noJS.css">
+
+<script src="underscore-min.js"> </script>
+	
+</head>
+
+
+<body>
+
+<noscript id="JSwarning">
+It appears that Javascript is disabled in your browser. Javascript is required for this generator to function.
+<br> To learn how to enable Javascript, <a href="http://www.enable-javascript.com/"> click here </a>
+</noscript>
+
+<h1> Fashionable metal bandname generator </h1>
+
+<p> Affectionately poking fun at unoriginality. <br> No offence or copyright infringment intended. </p> 
+<p>New words will continue to be added over time.</p> 
+
+<div id="generator">
+<button type="button" id="gen"> Generate a fashionable bandname </button>
+<p id="bn"> </p>
+</div>
+
+<div id="container">
+<footer>
+<p>© Dorothea Baker 2013</p>
+</footer>
+</div>
+
+<script>
+
+var of1=new Array("Born", "Song", "Ocean", "Galaxy", "Veil", "Circle", "Fire", "Sea", "Dawn");
+var of2=new Array("Sorrow", "Memories", "Misery", "Osiris", "Isis", "Galaxies", "Satan", "Tears", "Eternity", "Giants", "Maya", "Death", "Contempt", "Hatred", "Dissonance", "Discord", "Glaciers", "Skies", "Planets");
+  
+var the1=new Array("Roam", "Search", "Between", "Above", "Beyond", "Rebuild", "Recreate");
+var the2=new Array("Sky", "Universe", "Stars", "Planets", "Clouds", "Earth", "Sun", "Moon");
+  
+document.getElementById("gen").onclick=function() {
+
+var choice=new Array( _.sample(of1) + " of " + _.sample(of2), _.sample(the1) + " the " + _.sample(the2) );
+
+document.getElementById("bn").innerHTML=(_.sample(choice));
+
+}
+
+</script>
+
+
+</body>
+
+</html>
