@@ -91,6 +91,7 @@ button {
 width: 300px;
 height: 50px;
 background: linear-gradient(to top, #000, #444);
+background-image: -webkit-linear-gradient(bottom, #000, #444);
 cursor: pointer;
 border: none;
 color: #eee;
@@ -107,6 +108,7 @@ bottom: 2px;
 
 button:hover {
 background: linear-gradient(to bottom, #000, #444);
+background-image: -webkit-linear-gradient(bottom, #000, #444);
 }
 
 button:focus {
