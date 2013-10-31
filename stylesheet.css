@@ -90,8 +90,14 @@ margin-top: 45px;
 button {
 width: 300px;
 height: 50px;
-background: linear-gradient(to top, #000, #444);
-background-image: -webkit-linear-gradient(bottom, #000, #444);
+
+background-color: #000; /* fallback color if gradients are not supported */
+background-image: -webkit-linear-gradient(bottom, #000, #444); /* For Chrome and Safari */
+background-image:    -moz-linear-gradient(bottom, #000, #444); /* For old Fx (3.6 to 15) */
+background-image:     -ms-linear-gradient(bottom, #000, #444); /* For pre-releases of IE 10*/
+background-image:      -o-linear-gradient(bottom, #000, #444); /* For old Opera (11.1 to 12.0) */ 
+background-image:         linear-gradient(bottom, #000, #444); /* Standard syntax; must be last */
+
 cursor: pointer;
 border: none;
 color: #eee;
